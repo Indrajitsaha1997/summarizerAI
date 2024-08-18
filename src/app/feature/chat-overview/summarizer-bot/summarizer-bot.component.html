@@ -1,0 +1,10 @@
+<form class="example-form" [formGroup]="summarizerFormGroup">
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."
+      [formControl]="summarizerFormGroup.get('textInput')"></textarea>
+  </mat-form-field>
+  <button mat-stroked-button (click)="summarize()"><mat-icon>summarize</mat-icon>Summarize</button>
+</form>
+
+{{summary}}
